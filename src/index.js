@@ -8,5 +8,4 @@ app.get('/users', function(req, res){
     res.json(list)
 });
 
-
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
