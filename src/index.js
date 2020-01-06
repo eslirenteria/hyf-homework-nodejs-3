@@ -17,4 +17,20 @@ app.post('/user', (req, res) => {
     res.json(users);
 });
 
+app.delete('/user/:id', (req, res) => {
+    try{
+        if(users){
+            res.status(200).json({
+                ok: true
+            }) 
+        }else{
+            res.status(204).json({
+                ok: true
+            }) 
+        }
+    }catch(err){
+        next(err);
+    }
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
